@@ -1,0 +1,37 @@
+Amazon Lightsail	Easiest way to launch and manage a simple virtual private server (VPS). Includes: virtual machine, SSD-based storage, data transfer, DNS management, and static IP address.
+Regions	Geographic areas having two or more Availability Zones.
+Availability Zones	One or more discrete data centers, each with redundant power, networking, and connectivity, housed in separate facilities.
+Edge Locations	Endpoints for AWS which are used for caching content. Typically this consists of Amazon CloudFront, Amazon's Content Delivery Network (CDN)
+CloudFront	A fast content delivery network (CDN) service that securely delivers data, videos, applications, and APIs to customers globally with low latency, high transfer speeds, all within a developer-friendly environment.
+Glacier	A secure, durable, and extremely low-cost cloud storage service for data archiving and long-term backup. It is designed to deliver 99.999999999% (nine-nines) durability.
+Snowball	A petabyte-scale data transport solution that uses devices designed to be secure to transfer large amounts of data into and out of the AWS Cloud. Using Snowball addresses common challenges with large-scale data transfers including high network costs, long transfer times, and security concerns.
+Storage Gateway	Enables on-prem applications to seamlessly use AWS cloud storage. For backup/archiving, disaster recovery, cloud data processing, storage tiering, and migration. App connect to service through virtual machine or hardware gateway appliance using standard storage protocols (NFS/SMB/iSCSI). Connects to S3, Glacier, and EBS, providing storage for 1) files, 2) volumes, and 3) virtual tapes.
+DynamoDB	A nonrelational database that delivers reliable performance at any scale. It's a fully managed, multi-region, multi-master database that provides consistent single-digit millisecond latency, and offers built-in security, backup and restore, and in-memory caching.
+Simple Storage Service (S3)	New PUTS are immediately there. Overwrites and delets are eventually there. Pay by the GB. Name must be unique (because they are given a DNS address).
+Simple Storage Service (S3)	Object storage built to store and retrieve any amount of data from anywhere – web sites and mobile apps, corporate applications, and data from IoT sensors or devices. It is designed to deliver 99.999999999% (nine-nines) durability.
+Identity and Access Management (IAM)	Create and manage AWS users and groups, and use permissions to allow and deny their access to AWS resources.
+Identity and Access Management (IAM)	Account Owners, Users, and Execution Roles are separate concepts in this.
+Policy	In IAM, this defines one or more permissions for Users, Groups, and/or Execution Roles.
+Execution Roles	These can be given to AWS Resources (instances for example).
+Federate	IAM can do this with Active Directory and facebook.
+Multi-factor	IAM can do this type of authentication (which requires more than one method).
+False (Temorary access can be configured.)	There is no way for IAM to provide temporary access.  (True or False)
+False (A password rotation policy can be configured.)	It's up to users' honor to rotate their own passwords.  (True or False)
+True	IAM supports PCI DSS compliance.
+Elastic Map Reduce (EMR)	This processes big data across a Hadoop cluster of virtual servers on EC2 and S3. Can dynamically resize which allows it to ramp up or reduce resource use depending on the demand at any given time.  (Other popular distributed frameworks can be run such as Apache Spark, HBase, Presto, and Flink.  They can interact with data in other AWS data stores such as S3 and DynamoDB.)
+Relational Database Service (RDS)	This makes it easy to set up, operate, and scale a relational database in the cloud. Provides cost-efficient and resizable capacity while automating time-consuming administration tasks such as hardware provisioning, database setup, patching and backups. 
+MySQL	Amazon RDS supports six familiar database engines including Amazon Aurora, PostgreSQL, MariaDB, Oracle, Microsoft SQL Server, and this.
+Replicates	When a Multi-AZ DB Instance is provisioned, Amazon RDS synchronously does this with the data to a standby instance in a different Availability Zone (AZ).
+Snapshot	Taking a manual one of these before deleting might be prudent.
+Kinesis	This collects large amounts of data streamed from multiple sources.
+Redshift	This is for data warehousing.
+Elastic Block Store (EBS)	Persistent block storage volumes for use with Amazon EC2 instances in the AWS Cloud. Automatically replicated within its Availability Zone. Offers high availability and durability, low-latency, and can scale usage up or down within minutes.
+Elastic Block Store (EBS)	Because EC2 storage is temporary (data is lost when stopped or terminated), this would be a better option for permanent storage.
+Snapshot	EBS volumes can be backed up using this.
+Amazon Machine Image (AMI)	This provides the information required to launch an instance, which is a virtual server in the cloud. You *must*, in fact, specify one of these when launching an instance.
+False (AMI instances have have one or more security groups.)	Each AMI Instance can have only one security group.  (True or False)
+False (Private key is used.)	A Public key is used to access an AMI instance.  (True or False)
+True (Data only lost on Stop or Terminate.)	Data on instance storage will be preserved on reboot.  (True or False)
+True (Some don't.)	Not all AMI's have instance storage.  (True or False)
+Elastic Compute Cloud (EC2)	This web service that provides resizeable computing capacity - literally, servers in Amazon's data centers - that you use to build and host your software systems.
+Elastic Beanstalk	Developers just upload code with this.  Scaling and load balancing is done automatically.
