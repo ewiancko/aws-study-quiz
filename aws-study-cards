@@ -7,7 +7,7 @@ Glacier	A secure, durable, and extremely low-cost cloud storage service for data
 Snowball	A petabyte-scale data transport solution that uses devices designed to be secure to transfer large amounts of data into and out of the AWS Cloud. Using Snowball addresses common challenges with large-scale data transfers including high network costs, long transfer times, and security concerns.
 Storage Gateway	Enables on-prem applications to seamlessly use AWS cloud storage. For backup/archiving, disaster recovery, cloud data processing, storage tiering, and migration. App connect to service through virtual machine or hardware gateway appliance using standard storage protocols (NFS/SMB/iSCSI). Connects to S3, Glacier, and EBS, providing storage for 1) files, 2) volumes, and 3) virtual tapes.
 DynamoDB	A nonrelational database that delivers reliable performance at any scale. It's a fully managed, multi-region, multi-master database that provides consistent single-digit millisecond latency, and offers built-in security, backup and restore, and in-memory caching.
-Simple Storage Service (S3)	New PUTS are immediately there. Overwrites and delets are eventually there. Pay by the GB. Name must be unique (because they are given a DNS address).
+Simple Storage Service (S3)	New PUTS are immediately there. Overwrites and deletes are eventually there. Pay by the GB. Name must be unique (because they are given a DNS address).
 Simple Storage Service (S3)	Object storage built to store and retrieve any amount of data from anywhere – web sites and mobile apps, corporate applications, and data from IoT sensors or devices. It is designed to deliver 99.999999999% (nine-nines) durability.
 Identity and Access Management (IAM)	Create and manage AWS users and groups, and use permissions to allow and deny their access to AWS resources.
 Identity and Access Management (IAM)	Account Owners, Users, and Execution Roles are separate concepts in this.
@@ -29,9 +29,30 @@ Elastic Block Store (EBS)	Persistent block storage volumes for use with Amazon E
 Elastic Block Store (EBS)	Because EC2 storage is temporary (data is lost when stopped or terminated), this would be a better option for permanent storage.
 Snapshot	EBS volumes can be backed up using this.
 Amazon Machine Image (AMI)	This provides the information required to launch an instance, which is a virtual server in the cloud. You *must*, in fact, specify one of these when launching an instance.
-False (AMI instances have have one or more security groups.)	Each AMI Instance can have only one security group.  (True or False)
+False (AMI instances can have one or more security groups.)	Each AMI Instance can have only one security group.  (True or False)
 False (Private key is used.)	A Public key is used to access an AMI instance.  (True or False)
 True (Data only lost on Stop or Terminate.)	Data on instance storage will be preserved on reboot.  (True or False)
 True (Some don't.)	Not all AMI's have instance storage.  (True or False)
 Elastic Compute Cloud (EC2)	This web service that provides resizeable computing capacity - literally, servers in Amazon's data centers - that you use to build and host your software systems.
-Elastic Beanstalk	Developers just upload code with this.  Scaling and load balancing is done automatically.
+Elastic Beanstalk	A service for deploying and scaling web apps and services developed with Java, .NET, PHP, Node.js, Python, Ruby, Go, and Docker on familiar servers such as Apache, Nginx, Passenger, and IIS.  Capacity provisioning, scaling, load balancing, and health-monitoring are done automatically.
+Cross-region Replication	In order to turn this on both buckets must have Versioning turned on and they must be in different Regions.
+False (Not at this time)	Multiple buckets in multiple Regions can be daisy-chained with Cross-region Replication.  (True or False)
+False (Existing files are not replicated.)	When enabling Cross-region Replication, existing files are replicated.  (True or False)
+True (Deletion of individul versions is also not replicated.)	With Cross-region Replication, delete markers are replicated but *removing* delete markers is *not* replicated.  (True or False)
+Elasticsearch	An open-source search and analytics engine.  Does logging, real-time monitoring, clickstream analytics, and text search.  Integrates with Kibana and Logstash for data ingestion and visualization.
+Kibana	An open-source analytics and visualization platform that shows Elasticsearch and CloudTrail data.
+CloudWatch	A monitoring and management service for application monitoring, understanding and responding to system-wide performance changes, optimizing resource utilization, and geting a unified view of operational health.
+CloudTrail	A service that enables governance, compliance, and operational and risk auditing of an AWS account. Activity can be logged, continuously monitored, and retained concerning actions across an AWS infrastructure.  Event history includes actions at the AWS Management Console.
+Logstash	Logstash is a light-weight, open-source, server-side data processing pipeline that allows the collection of data from a variety of sources, transform it on the fly, and send it to a desired destination. Most often used as a data pipeline for loading data into Elasticsearch.
+Elastic Load Balancing (ELB)	A load-balancing service for AWS deployments.  It automatically distributes incoming application traffic and scales resources to meet traffic demands.
+Virtual Private Cloud (VPC)	Allows provisioning of a logically isolated part of the AWS Cloud where resources can be launched in a separate virtual network.  Control over IP address range, creation of subnets, and configuration of route tables and network gateways is available.  Both IPv4 and IPv6 can be used.
+Route 53	Amazons DNS service.
+CodeStar	Continuous Delivery tool chain.
+CodeCommit	Source control service.  Git repos stored in here.
+CodeBuild	Compiles code, runs tests, makes ready for deployment.
+CodeDeploy	Automates deployment to: * EC2 instances * On-prem instances * Lambda functions
+CodePipeline	Continuous Delivery service.
+X-Ray	For debugging of serverless applications.
+Cloud9	An cloud-based IDE where code can be developed.
+CloudFormation	Allows the provisioning of all infrastructure resources in a cloud environment from a text file.
+Config	A service that audits and evaluates the configuration of AWS resource.  Snapshots can be taken.
