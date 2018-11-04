@@ -1,0 +1,51 @@
+Glacier,"A secure, durable, and extremely low-cost cloud storage service for data archiving and long-term backup. It is designed to deliver 99.999999999% (eleven-nines) durability."
+Snowball,"A petabyte-scale data transport solution that uses devices designed to be secure to transfer large amounts of data into and out of the AWS Cloud. This addresses common challenges with large-scale data transfers including high network costs, long transfer times, and security concerns."
+True,"To move data Snowball to Glacier (or back), S3 must be used.  (True or False)"
+Kindle,A Snowball arrives with *this* attached to it to show you it's IP address.
+True,"When a Snowball arrives, the customer just plugs it in to power and to ethernet, SFP, or fiber.  (True or False)"
+True,File transfers are initiated from a client app downloaded to a Mac or PC.  Credientials for this come from AWS.  (True or False)
+Snowball Edge,*This* product is Snowball plus compute capabilities.  It can be thought of as a mini-data-center.  It can run Lambda functions.
+Snowmobile,*This* is a 45' sea-container on an 18-wheeler.  It's for petabyte and x-a-byte levels of data.
+Import/Export,"This is the name of the service before ""Snowball"" existed - where folks sent in their own disks."
+Storage Gateway,"Enables on-prem applications to seamlessly use AWS cloud storage. For backup/archiving, disaster recovery, cloud data processing, storage tiering, and migration."
+Storage Gateway,"A virtual machine or hardware gateway appliance that runs in your data center that connects to S3, Glacier, and EBS using standard storage protocols (NFS/SMB/iSCSI) that provides storage for 1) files, 2) volumes, and 3) virtual tapes."
+4 (Four),There are how many types of Storage Gateways?
+File Gateway (NFS),"This type of Storage Gateway is for flat files only (Word, PDF, image docs, video files, etc.)"
+Volumes Gateway (iSCSI),This type of Storage Gateway is a virtual hard disk - block based storage.
+Stored Volumes,This type of Volumes Gateway (iSCSI) is an entire dataset stored on site and asynchronously backed up to S3.
+Cached Volumes,This type of Volumes Gateway (iSCSI) is an entire dataset stored in S3 and the most frequently accessed data is cached on site.
+Tape Gateway (VTL),"This type of Storage Gateway is used for backup.  Apps like NetBackup, Veeam, etc."
+True,All buckets are 'private' by default.
+False,Policies do *not* apply to buckets.
+True,Access Control Lists apply to buckets.
+True,Simple Storage Service (S3) can create logs to other buckets.
+Simple Storage Service (S3),New PUTS are immediately there.  Overwrites and deletes are eventually there.  Pay by the GB.  Name must be unique (because they are given a DNS address).
+Simple Storage Service (S3),"Object storage built to store and retrieve any amount of data from anywhere – web sites and mobile apps, corporate applications, and data from IoT sensors or devices. It is designed to deliver 99.999999999% (nine-nines) durability."
+Cross-region Replication,"In order to turn this on, both buckets must have Versioning turned on and they must be in different Regions."
+False,Multiple buckets in multiple Regions can be daisy-chained with Cross-region Replication.  (True or False)
+False,"When enabling Cross-region Replication, existing files are replicated.  (True or False)"
+True,"With Cross-region Replication, delete markers are replicated but *removing* delete markers is *not* replicated.  (True or False)"
+False,"With Cross-region Replication, deletion of individul versions is replicated..  (True or False)"
+Infrequently Accessed,"The ""IA"" in ""S3-IA"" stands for what?"
+True,SSL can be used to encrypt data in transit with S3.  (True or False)
+False,TLS *cannot* be used to encrypt data in transit with S3.  (True or False)
+True,SSE-S3 or S3 Managed Keys is one form of server side encryption for data at rest.
+False,SSE-C is Client Side Encryption with Customer Provided Keys
+Key Management Service (KMS),A managed service that makes it easy for you to create and control the encryption keys used to encrypt your data.  It is integrated with most other AWS services including CloudTrail.
+S3 Transfer Acceleration,Enabling this on an S3 bucket creates a CloudFront Edge Location and a new domain for the bucket.
+True,The URL of a bucket would be:  https://s3-<region>.amazonaws.com/<bucketname>  (True or False)
+False,An operating system can be installed on S3.  (True or False)
+Objects,This word refers to items stored in Simple Storage Service (S3).
+True,S3 bucket names must be unique *globally*.  (True or False)
+False,Multi-part upload is not possible and wouldn't make uploads to S3 faster anyway.  (True or False)
+S3 Storage Classes,"S3 Standard, S3 Standard-IA, S3 One Zone-IA, and Glacier are all what?"
+S3 Standard,"This S3 Storage Class has 99.99% availability, 11 9's durability, and can sustain two facilities lost."
+S3 Standard-IA,"This S3 Storage Class is similar to S3 Standard.  It is rapidly accessible, lower cost, but has a retrieval fee."
+S3 One Zone-IA,This S3 Storage Class has no zone resilience.  It replaces RRS (reduced redundancy storage)
+Glacier,"With this S3 Storage Class, it takes minutes or hours to retrieve objects."
+True,S3 Versioning stores all versions of an object.  (True or False)
+False,"When S3 Versioning is turned on, delete actually deletes the object.  (True or False)"
+True,"Once enabled, S3 Versioning *cannot* be stopped, only suspended.  (True or False)"
+Lifecycle Management,"What service can be used to transition S3 files over to Standard-IA (>128kb and >30 days), transition to Glacier (after 30 days in IA), or permanentely delete?"
+False,Lifecycle Management requires that S3 Versioning be enabled.  (True or False)
+True,Versioning’s MFA Delete capability provides an added layer of security because https is required along with the x-amz-mfa request header.
