@@ -11,7 +11,8 @@ Storage Gateway,"Enables on-prem applications to seamlessly use AWS cloud storag
 Storage Gateway,"A virtual machine or hardware gateway appliance that runs in your data center that connects to S3, Glacier, and EBS using standard storage protocols (NFS/SMB/iSCSI) that provides storage for 1) files, 2) volumes, and 3) virtual tapes."
 4 (Four),There are how many types of Storage Gateways?
 File Gateway (NFS),"This type of Storage Gateway is for flat files only (Word, PDF, image docs, video files, etc.)"
-Volumes Gateway (iSCSI),This type of Storage Gateway is a virtual hard disk - block based storage.
+Volume Gateway (iSCSI),This type of Storage Gateway is a virtual hard disk - block based storage - with point-in-time backups as EBS snapshots.
+Stored and Cached,What are the two types of Volume Gateways?
 Stored Volumes,This type of Volumes Gateway (iSCSI) is an entire dataset stored on site and asynchronously backed up to S3.
 Cached Volumes,This type of Volumes Gateway (iSCSI) is an entire dataset stored in S3 and the most frequently accessed data is cached on site.
 Tape Gateway (VTL),"This type of Storage Gateway is used for backup.  Apps like NetBackup, Veeam, etc."
@@ -20,7 +21,7 @@ False,Policies do *not* apply to buckets.
 True,Access Control Lists apply to buckets.
 True,Simple Storage Service (S3) can create logs to other buckets.
 Simple Storage Service (S3),New PUTS are immediately there.  Overwrites and deletes are eventually there.  Pay by the GB.  Name must be unique (because they are given a DNS address).
-Simple Storage Service (S3),"Object storage built to store and retrieve any amount of data from anywhere – web sites and mobile apps, corporate applications, and data from IoT sensors or devices. It is designed to deliver 99.999999999% (nine-nines) durability."
+Simple Storage Service (S3),"Object storage built to store and retrieve any amount of data from anywhere – web sites and mobile apps, corporate applications, and data from IoT sensors or devices. It is designed to deliver 99.999999999% (eleven-nines) durability."
 Cross-region Replication,"In order to turn this on, both buckets must have Versioning turned on and they must be in different Regions."
 False,Multiple buckets in multiple Regions can be daisy-chained with Cross-region Replication.  (True or False)
 False,"When enabling Cross-region Replication, existing files are replicated.  (True or False)"
@@ -29,11 +30,14 @@ False,"With Cross-region Replication, deletion of individul versions is replicat
 Infrequently Accessed,"The ""IA"" in ""S3-IA"" stands for what?"
 True,SSL can be used to encrypt data in transit with S3.  (True or False)
 False,TLS *cannot* be used to encrypt data in transit with S3.  (True or False)
-True,SSE-S3 or S3 Managed Keys is one form of server side encryption for data at rest.
-False,SSE-C is Client Side Encryption with Customer Provided Keys
+True,SSE-S3 or S3 Managed Keys is one form of server side encryption for data at rest.  (True or False)
+False,SSE-C is Client Side Encryption with Customer provided keys.  (True or False)
 Key Management Service (KMS),A managed service that makes it easy for you to create and control the encryption keys used to encrypt your data.  It is integrated with most other AWS services including CloudTrail.
 S3 Transfer Acceleration,Enabling this on an S3 bucket creates a CloudFront Edge Location and a new domain for the bucket.
 True,The URL of a bucket would be:  https://s3-<region>.amazonaws.com/<bucketname>  (True or False)
+Region,Fill in the missing part of this bucket URL:  https://s3-<??????>.amazonaws.com/<bucketname>
+Bucket,Fill in the missing part of this bucket URL:  https://s3-<region>.amazonaws.com/<??????name>
+amazonaws,Fill in the missing part of this bucket URL:  https://s3-<region>.?????????.com/<bucketname>
 False,An operating system can be installed on S3.  (True or False)
 Objects,This word refers to items stored in Simple Storage Service (S3).
 True,S3 bucket names must be unique *globally*.  (True or False)
@@ -48,4 +52,4 @@ False,"When S3 Versioning is turned on, delete actually deletes the object.  (Tr
 True,"Once enabled, S3 Versioning *cannot* be stopped, only suspended.  (True or False)"
 Lifecycle Management,"What service can be used to transition S3 files over to Standard-IA (>128kb and >30 days), transition to Glacier (after 30 days in IA), or permanentely delete?"
 False,Lifecycle Management requires that S3 Versioning be enabled.  (True or False)
-True,Versioning’s MFA Delete capability provides an added layer of security because https is required along with the x-amz-mfa request header.
+True,Versioning’s MFA Delete capability provides an added layer of security because https is required along with the x-amz-mfa request header.  (True or False)
